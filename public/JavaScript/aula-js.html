@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de JavaScript</title>
     <style>
-        body{
-            background-color: darkgray;
+        body {
+            background-color: #dddddd;
             margin: 0;
             padding: 0px 20px 0px 20px;
         }
-
+        
         .container {
-              counter-reset: line;
-              font-size: 15px;
-              background-color: white;
+            counter-reset: line;
+            font-size: 15px;
+            background-color: white;
         }
+        
         .container .lineNum {
             display: block;
             line-height: 1.5rem;
@@ -24,193 +26,171 @@
             margin: 0;
             padding-left: 10px;
         }
-
+        
         .container .lineNum:before {
             counter-increment: line;
             content: counter(line);
             display: inline-block;
             margin-right: .5em;
         }
-
-        .container .code{
+        
+        .container .code {
             color: black;
         }
     </style>
 </head>
-    <body>
-        <h1>Aula 3: JavaScript</h1>
-        <hr>
-        <h2>Introdução</h2>
-        <p>
-            JavaScript que muitas vezes é abreviado para JS, é uma linguagem de programação leve, que se
-            baseia em objetos e funções de primeira classe, porém ela é mais conhecida por ser uma linguagem
-            de script para páginas Web.
-        </p>
-        <p>
-            É uma linguagem de scripting que de baseia em protótipos, multi-paradigma e dinâmica que suporta
-            orientação à objetos imperativo e funcional. Esta linguagem roda no client side da web, permitindo
-            que um evento em uma página possa ser programável para ocorrer mediante uma ação do usuário, ou se
-            alguma outra condição for satisfeita.
-        </p>
-        <p>
-            O JavaScript foi criado em 1995 por Brendan Eich para ser utilizada no finado navegador Netscape
-            Navigator 2, sua função na época era facilitar coisas como preenchimentos de formulários que eram
-            verificado no server side, podendo demorar por volta de 30 segundos para valida-los ou não.   
-        </p>
-        <h2>Funcionamento</h2>
-        <p>
-            Algumas das coisas que o JavaScript pode fazer incluem:
-        </p>
 
-        <ul>
-            <li>Armazenar conteúdo em variáveis, por exemplo, dados de formulários.</li><br>
-            <li>Operações com textos, podendo retirar ou adicionar letras, juntar duas palavras etc.</li><br>
-            <li>Executar códigos em resposta a um evento ocorrido na página web, como um clique de um botão.</li>
-        </ul>
+<body>
+    <h1>Aula 3: JavaScript</h1>
+    <hr>
+    <h2>Introdução</h2>
+    <p>
+        JavaScript que muitas vezes é abreviado para JS, é uma linguagem de programação leve, que se baseia em objetos e funções de primeira classe, porém ela é mais conhecida por ser uma linguagem de script para páginas Web.
+    </p>
+    <p>
+        É uma linguagem de scripting que de baseia em protótipos, multi-paradigma e dinâmica que suporta orientação à objetos imperativo e funcional. Esta linguagem roda no client side da web, permitindo que um evento em uma página possa ser programável para
+        ocorrer mediante uma ação do usuário, ou se alguma outra condição for satisfeita.
+    </p>
+    <p>
+        O JavaScript foi criado em 1995 por Brendan Eich para ser utilizada no finado navegador Netscape Navigator 2, sua função na época era facilitar coisas como preenchimentos de formulários que eram verificado no server side, podendo demorar por volta de
+        30 segundos para valida-los ou não.
+    </p>
+    <h2>Funcionamento</h2>
+    <p>
+        Algumas das coisas que o JavaScript pode fazer incluem:
+    </p>
 
-        <p>
-            Algo que deve ser entendido é que boa parte de função mais úteis do JavaScript vem de APIs que ele
-            possui, API é o abreviado de Application Programming Interfaces (Interface de Programação de
-            Aplicações) e elas proveem conjuntos prontos com blocos de instruções que permitem fazer várias
-            coisas. A API mais popular e o DOM (Document Object Model).
-        </p>
-        <p>
-            O JavaScript pode ser utilizado para verificar se dados e formulários estão corretos, alertar o
-            usuário sobre algo durante sua navegação, alterar conteúdos de uma página como texto caso um
-            certo evento ocorra.
-        </p>
+    <ul>
+        <li>Armazenar conteúdo em variáveis, por exemplo, dados de formulários.</li><br>
+        <li>Operações com textos, podendo retirar ou adicionar letras, juntar duas palavras etc.</li><br>
+        <li>Executar códigos em resposta a um evento ocorrido na página web, como um clique de um botão.</li>
+    </ul>
 
-        <p>O código abaixo mostra a troca de cores de um texto em certa página web:</p>
+    <p>
+        Algo que deve ser entendido é que boa parte de função mais úteis do JavaScript vem de APIs que ele possui, API é o abreviado de Application Programming Interfaces (Interface de Programação de Aplicações) e elas proveem conjuntos prontos com blocos de
+        instruções que permitem fazer várias coisas. A API mais popular e o DOM (Document Object Model).
+    </p>
+    <p>
+        O JavaScript pode ser utilizado para verificar se dados e formulários estão corretos, alertar o usuário sobre algo durante sua navegação, alterar conteúdos de uma página como texto caso um certo evento ocorra.
+    </p>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code"> | var change = document.querySelector("p");</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | </span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | change.addEventListener('click', paraColor);</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | </right></pre>
-            <pre class="lineNum"><right><span class="code"> | function paraColor(){</right></pre>
-            <pre class="lineNum"><right><span class="code"> |   change.style.color = "green";</right></pre>
-            <pre class="lineNum"><right><span class="code"> | }</right></pre>
-        </div>
+    <p>O código abaixo mostra a troca de cores de um texto em certa página web:</p>
 
-        <p>
-            Ao analisar esse código temos vários elementos que permite que isso ocorra, vamos a eles:     
-        </p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">var change = document.querySelector("p");</span></right></pre>
+        <pre class="lineNum"><right><span class="code"></span></right></pre>
+        <pre class="lineNum"><right><span class="code">change.addEventListener('click', paraColor);</span></right></pre>
+        <pre class="lineNum"><right><span class="code"></right></pre>
+        <pre class="lineNum"><right><span class="code">function paraColor(){</right></pre>
+        <pre class="lineNum"><right><span class="code">  change.style.color = "green";</right></pre>
+        <pre class="lineNum"><right><span class="code">}</right></pre>
+    </div>
 
-        <ol>
-            <li>
-                var: é uma palavra reservada da linguagem que indica a criação de uma variável de
-                escopo global, ou seja, que pode ser acessada de qualquer lugar do código.
-            </li>
-            <br>
+    <p>
+        Ao analisar esse código temos vários elementos que permite que isso ocorra, vamos a eles:
+    </p>
 
-            <li>change: neste caso é apenas o nome dado à variável.</li><br>
+    <ol>
+        <li>
+            var: é uma palavra reservada da linguagem que indica a criação de uma variável de escopo global, ou seja, que pode ser acessada de qualquer lugar do código.
+        </li>
+        <br>
 
-            <li>
-                document: document faz parte da API DOM e é um objeto com vários métodos que permitem
-                a manipulação de conteúdo de uma página.
-            </li>
-            <br>
-            
-            <li>
-                querySelector("p"): este método serve para escolher algum elemento da página que este
-                script está vínculado, neste caso foi selecionado todos os parágrafos de uma página, mas
-                outros elementos podem ser colocados no lugar de p, como h1.
-            </li>
-            <br>
+        <li>change: neste caso é apenas o nome dado à variável.</li><br>
 
-            <li>
-                addEventListener: permite "escutar" o acontecimento de um evento que pode ocorrer a
-                qualquer momento, neste caso foi selecionado o evento de clique em algo, e depois da virgula
-                está o que irá ocorrer, que no caso é chamar a função que está logo abaixo.
-            </li>
-            <br>
+        <li>
+            document: document faz parte da API DOM e é um objeto com vários métodos que permitem a manipulação de conteúdo de uma página.
+        </li>
+        <br>
 
-            <li>
-                change.style.color: o comando dentro desta função está acessando a variável change, e utiliza
-                o método style para acessar o estilo do elemento, e seleciona a propriedade color para alterar sua
-                cor, e a partir daí seleciona-se a cor verde que está entre as aspas.
-            </li>
-        </ol>
+        <li>
+            querySelector("p"): este método serve para escolher algum elemento da página que este script está vínculado, neste caso foi selecionado todos os parágrafos de uma página, mas outros elementos podem ser colocados no lugar de p, como h1.
+        </li>
+        <br>
 
-        <p>
-            É importante lembrar que é necessário ter algum conhecimento básico de programação para fazer estes
-            códigos, mas a sintaxe de JavaScript básico segue os moldes do que foi citado no exemplo acima.
-        </p>
+        <li>
+            addEventListener: permite "escutar" o acontecimento de um evento que pode ocorrer a qualquer momento, neste caso foi selecionado o evento de clique em algo, e depois da virgula está o que irá ocorrer, que no caso é chamar a função que está logo abaixo.
+        </li>
+        <br>
 
-        <h2>Como utilizar?</h2>
-        <p>
-            Para que o JavaScript seja utilizado, ele precisa ser vínculado com um documento HTML, havendo
-            duas formas diferentes de se fazer isso. Existe o JS externo e o JS interno, sendo que cada um
-            tem suas particularidades.
-        </p>
-        <p>
-            No caso do JS externo, ele se trata de um arquivo totalmente separado comdo documento HTML, que
-            possui a extensão .js e para vinculá-lo é necessário aplicar um elemento dentro do &lt;head&gt; ou 
-            antes do fechamento da tag &lt;body&gt;, sendo a última opção a mais recomendada:        
-        </p>
+        <li>
+            change.style.color: o comando dentro desta função está acessando a variável change, e utiliza o método style para acessar o estilo do elemento, e seleciona a propriedade color para alterar sua cor, e a partir daí seleciona-se a cor verde que está entre
+            as aspas.
+        </li>
+    </ol>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code">| &lt;script src="caminho do arquivo .js"&gt;&lt;/script&gt;</span></right></pre>
-        </div>
+    <p>
+        É importante lembrar que é necessário ter algum conhecimento básico de programação para fazer estes códigos, mas a sintaxe de JavaScript básico segue os moldes do que foi citado no exemplo acima.
+    </p>
 
-        <p>
-            O elemento em questão permite que o documento HTML acesse o código presente no documento de
-            JavaScript.
-        </p>
+    <h2>Como utilizar?</h2>
+    <p>
+        Para que o JavaScript seja utilizado, ele precisa ser vínculado com um documento HTML, havendo duas formas diferentes de se fazer isso. Existe o JS externo e o JS interno, sendo que cada um tem suas particularidades.
+    </p>
+    <p>
+        No caso do JS externo, ele se trata de um arquivo totalmente separado comdo documento HTML, que possui a extensão .js e para vinculá-lo é necessário aplicar um elemento dentro do &lt;head&gt; ou antes do fechamento da tag &lt;body&gt;, sendo a última
+        opção a mais recomendada:
+    </p>
 
-        <p>
-            O JS interno se encontra entre as tags script que estão em algum local no documento HTML, neste
-            caso o atributo src não é usado na tag e o script é todo é reconhecido como JavaScript desde
-            que esteja entre as tags &lt;script&gt;.
-        </p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;script src="caminho do arquivo .js"&gt;&lt;/script&gt;</span></right></pre>
+    </div>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code"> | &lt;!DOCTYPE html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | &lt;html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;meta charset="utf-8"&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;/head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;p id="exemplo"&gt;Clique em Mim&lt;/p&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;script&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |           var change = document.getElementById("exemplo");</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| </span></right></pre>
-            <pre class="lineNum"><right><span class="code">|            change.addEventListener('click', paraColor);</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| </right></pre>
-            <pre class="lineNum"><right><span class="code">|            function paraColor(){</right></pre>
-            <pre class="lineNum"><right><span class="code">|              change.style.color = "green";</right></pre>
-            <pre class="lineNum"><right><span class="code">|            }</right></pre>
-            <pre class="lineNum"><right><span class="code">|        &lt;/script&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|    &lt;/body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| &lt;/html&gt;</span></right></pre>
-        </div>
+    <p>
+        O elemento em questão permite que o documento HTML acesse o código presente no documento de JavaScript.
+    </p>
 
-        <h3>Resultado:</h3>
-        <p id="exemplo">Clique em Mim.</p>
+    <p>
+        O JS interno se encontra entre as tags script que estão em algum local no documento HTML, neste caso o atributo src não é usado na tag e o script é todo é reconhecido como JavaScript desde que esteja entre as tags &lt;script&gt;.
+    </p>
 
-        <p>
-            Este método é útil para sites simples que possuem uma página só, ou para tratar um evento
-            específico da página onde este JS está, mas não é recomendado para um site com múltiplas
-            páginas já que seria necessário copiar este script em todos os documentos HTML.
-        </p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;!DOCTYPE html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;meta charset="utf-8"&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;/head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;p id="exemplo"&gt;Clique em Mim&lt;/p&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;script&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">          var change = document.getElementById("exemplo");</span></right></pre>
+        <pre class="lineNum"><right><span class="code"></span></right></pre>
+        <pre class="lineNum"><right><span class="code">          change.addEventListener('click', paraColor);</span></right></pre>
+        <pre class="lineNum"><right><span class="code"></right></pre>
+        <pre class="lineNum"><right><span class="code">          function paraColor(){</right></pre>
+        <pre class="lineNum"><right><span class="code">            change.style.color = "green";</right></pre>
+        <pre class="lineNum"><right><span class="code">          }</right></pre>
+        <pre class="lineNum"><right><span class="code">      &lt;/script&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">  &lt;/body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;/html&gt;</span></right></pre>
+    </div>
 
-        <hr>
+    <h3>Resultado:</h3>
+    <p id="exemplo">Clique em Mim.</p>
 
-        <h2>Referências</h2>
+    <p>
+        Este método é útil para sites simples que possuem uma página só, ou para tratar um evento específico da página onde este JS está, mas não é recomendado para um site com múltiplas páginas já que seria necessário copiar este script em todos os documentos
+        HTML.
+    </p>
 
-        <ul>
-            <li>Sobre JavaScript: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/About_JavaScript">https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/About_JavaScript</a></li>
-            <li>História do JavaScript – JavaScript (S01E01): <a href="https://devheroes.io/javascript-s01e01-historia-javascript/">https://devheroes.io/javascript-s01e01-historia-javascript/</a></li>
-        </ul>
-        <script>
-            var change = document.getElementById("exemplo");
+    <hr>
 
-            change.addEventListener('click', paraColor);
+    <h2>Referências</h2>
 
-            function paraColor(){
+    <ul>
+        <li>Sobre JavaScript: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/About_JavaScript">https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/About_JavaScript</a></li>
+        <li>História do JavaScript – JavaScript (S01E01): <a href="https://devheroes.io/javascript-s01e01-historia-javascript/">https://devheroes.io/javascript-s01e01-historia-javascript/</a></li>
+    </ul>
+    <script>
+        var change = document.getElementById("exemplo");
+
+        change.addEventListener('click', paraColor);
+
+        function paraColor() {
             change.style.color = "green";
-            }
-        </script>
-    </body>
+        }
+    </script>
+</body>
+
 </html>

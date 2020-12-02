@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de CSS</title>
     <style>
-        body{
-            background-color: darkgray;
+        body {
+            background-color: #dddddd;
             margin: 0;
             padding: 0px 20px 0px 20px;
         }
-
+        
         .container {
-              counter-reset: line;
-              font-size: 15px;
-              background-color: white;
+            counter-reset: line;
+            font-size: 15px;
+            background-color: white;
         }
+        
         .container .lineNum {
             display: block;
             line-height: 1.5rem;
@@ -24,236 +26,208 @@
             margin: 0;
             padding-left: 10px;
         }
-
+        
         .container .lineNum:before {
             counter-increment: line;
             content: counter(line);
             display: inline-block;
             margin-right: .5em;
         }
-
-        .container .code{
+        
+        .container .code {
             color: black;
         }
-
-        #exemplo{
+        
+        #exemplo {
             color: green;
             font-size: 40px;
         }
     </style>
 </head>
-    <body>
-        <h1>Aula 2: CSS</h1>
-        <hr>
-        <h2>Introdução</h2>
-        <p>
-            CSS significa Cascading Style Sheets (Folhas de Estilo em Cascata em português) e ela se trata
-            de uma linguagem de estilo que é utilizada para descrever como um documento HTML ou XML será
-            apresentado. Ele efetivamente descreve como serão mostrados elementos estruturados em HTML ou
-            XML.
-        </p>
-        <p>
-            Esta linguagem é padronizada em navegadores de acordo com a especificação da W3C e já possui
-            três versões, com o CSS1 estando obsoleto, o CSS2.1 está caindo em desuso rapidamente e CSS3
-            é a versão mais atual e utilizada.
-        </p>
-        <p>
-            O CSS foi primeiramente proposto por Hakon Lie em 1994, visando facilitar a produção de sites
-            que era muito complexa na época, mas apenas em 1995 que a W3C (Grupo de empresas de informática)
-            criou o CSS1, ganhando destaque mais tarde em 1997 e 1999 e ficando conhecida por boa parte
-            dos criadores de sites.             
-        </p>
-        <h2>Funcionamento</h2>
-        <p>
-            Por mais que apenas o HTML já seja o suficiente para criar uma página web, isso não quer dizer
-            que esta página estaria apresentável para um usuário comum, e é aí que o CSS entra, para poder
-            melhorar esta apresentação da página para o usuário.
-        </p>
-        <p>
-            O CSS pode ser usado para estilizar textos em uma página, mudando a cor do mesmo, pode-se mudar
-            o tamanho de títulos e links, criar animações, alterar espaçamentos para ajustar o layout de
-            uma página etc.
-        </p>
-        <p>
-            Esta linguagem é baseada em regras, logo o desenvolvedor define as regras com o conjunto de
-            estilo que serão aplicados em elementos das páginas HTML. Podemos exemplificar isso da seguinte
-            forma: "Eu quero que meu parágrafo seja verde e tenha um tamanho maior que o normal."
-        </p>
-        <p>O código abaixo mostra regras que aplicam o que foi comentado na frase acima:</p>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code">| p {</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|    color: green;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|    font-size: 40px;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| }</span></right></pre>
-        </div>
+<body>
+    <h1>Aula 2: CSS</h1>
+    <hr>
+    <h2>Introdução</h2>
+    <p>
+        CSS significa Cascading Style Sheets (Folhas de Estilo em Cascata em português) e ela se trata de uma linguagem de estilo que é utilizada para descrever como um documento HTML ou XML será apresentado. Ele efetivamente descreve como serão mostrados elementos
+        estruturados em HTML ou XML.
+    </p>
+    <p>
+        Esta linguagem é padronizada em navegadores de acordo com a especificação da W3C e já possui três versões, com o CSS1 estando obsoleto, o CSS2.1 está caindo em desuso rapidamente e CSS3 é a versão mais atual e utilizada.
+    </p>
+    <p>
+        O CSS foi primeiramente proposto por Hakon Lie em 1994, visando facilitar a produção de sites que era muito complexa na época, mas apenas em 1995 que a W3C (Grupo de empresas de informática) criou o CSS1, ganhando destaque mais tarde em 1997 e 1999 e
+        ficando conhecida por boa parte dos criadores de sites.
+    </p>
+    <h2>Funcionamento</h2>
+    <p>
+        Por mais que apenas o HTML já seja o suficiente para criar uma página web, isso não quer dizer que esta página estaria apresentável para um usuário comum, e é aí que o CSS entra, para poder melhorar esta apresentação da página para o usuário.
+    </p>
+    <p>
+        O CSS pode ser usado para estilizar textos em uma página, mudando a cor do mesmo, pode-se mudar o tamanho de títulos e links, criar animações, alterar espaçamentos para ajustar o layout de uma página etc.
+    </p>
+    <p>
+        Esta linguagem é baseada em regras, logo o desenvolvedor define as regras com o conjunto de estilo que serão aplicados em elementos das páginas HTML. Podemos exemplificar isso da seguinte forma: "Eu quero que meu parágrafo seja verde e tenha um tamanho
+        maior que o normal."
+    </p>
+    <p>O código abaixo mostra regras que aplicam o que foi comentado na frase acima:</p>
 
-        <p>
-            Analisando este trecho de código, temos quatro itens fundamentais para a construção de uma regra
-            em CSS, sendo elas:            
-        </p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">p {</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   color: green;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   font-size: 40px;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">}</span></right></pre>
+    </div>
 
-        <ol>
-            <li>
-                Seletor: seleciona o elemento HTML de mesmo nome que irá ser estilizado, no caso do exemplo
-                o p que cria parágrafos &lt;p&gt;.
-            </li>
-            <br>
-            <li>
-                Chaves: dentro das chaves estarão as instruções que irão estilizar o elemento desejado, tendo
-                propriedades e valores para tais propriedades.
-            </li>
-            <br>
+    <p>
+        Analisando este trecho de código, temos quatro itens fundamentais para a construção de uma regra em CSS, sendo elas:
+    </p>
 
-            <li>
-                Propriedade: as propriedades são um conjunto de termos que podemos usar para modificar algo
-                em um elemento, no caso do exemplo é usado o color para alterar a cor, e font-size para trocar o
-                tamanho do texto do parágrafo.
-            </li>
-            <br>
-            
-            <li>
-                Valor: os valores são associados às propriedades após os dois pontos, sendo os tipos de
-                valores diferentes dependendo da propriedade usada, por exemplo, no color é utilizado a cor
-                verde em inglês, mas no font-size é utilizado quarenta pixels para definir o tamanho da fonte.
-            </li>
-        </ol>
+    <ol>
+        <li>
+            Seletor: seleciona o elemento HTML de mesmo nome que irá ser estilizado, no caso do exemplo o p que cria parágrafos &lt;p&gt;.
+        </li>
+        <br>
+        <li>
+            Chaves: dentro das chaves estarão as instruções que irão estilizar o elemento desejado, tendo propriedades e valores para tais propriedades.
+        </li>
+        <br>
 
-        <p>
-            Vale lembrar que é importante ter dois pontos entre a propriedade e o valor, seguido de um ponto
-            e vírgula após o valor, caso contrário o arquivo CSS não se comportará da maneira esperada.
-        </p>
+        <li>
+            Propriedade: as propriedades são um conjunto de termos que podemos usar para modificar algo em um elemento, no caso do exemplo é usado o color para alterar a cor, e font-size para trocar o tamanho do texto do parágrafo.
+        </li>
+        <br>
 
-        <p>
-            Cada regra fica uma embaixo da outra em um documento CSS, geralmente tendo-se um espaço de uma
-            linha entre cada regra.
-        </p>
+        <li>
+            Valor: os valores são associados às propriedades após os dois pontos, sendo os tipos de valores diferentes dependendo da propriedade usada, por exemplo, no color é utilizado a cor verde em inglês, mas no font-size é utilizado quarenta pixels para definir
+            o tamanho da fonte.
+        </li>
+    </ol>
 
-        <h2>Como utilizar?</h2>
-        <p>
-            Para que o CSS seja utilizado, ele precisa ser vínculado com um documento HTML, havendo três
-            formas diferentes de se fazer isso. Existe o CSS externo, o CSS interno e o CSS inline, sendo
-            que cada um tem suas particularidades.
-        </p>
-        <p>
-            O CSS externo é um arquivo CSS completamente separado de um documento HTML com a extensão .css,
-            e para vinculá-lo é necessário aplicar um elemento dentro de <head> no documento HTML, sendo 
-            este elemento:            
-        </p>
+    <p>
+        Vale lembrar que é importante ter dois pontos entre a propriedade e o valor, seguido de um ponto e vírgula após o valor, caso contrário o arquivo CSS não se comportará da maneira esperada.
+    </p>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code">| &lt;link rel="stylesheet" href="caminho do arquivo .css"&gt;</span></right></pre>
-        </div>
+    <p>
+        Cada regra fica uma embaixo da outra em um documento CSS, geralmente tendo-se um espaço de uma linha entre cada regra.
+    </p>
 
-        <p>
-            Este elemento permite que o documento HTML encontre o documento CSS para que ambos sejam
-            vínculados e os elementos HTML se mostrem estilizados pra o usuário.
-        </p>
+    <h2>Como utilizar?</h2>
+    <p>
+        Para que o CSS seja utilizado, ele precisa ser vínculado com um documento HTML, havendo três formas diferentes de se fazer isso. Existe o CSS externo, o CSS interno e o CSS inline, sendo que cada um tem suas particularidades.
+    </p>
+    <p>
+        O CSS externo é um arquivo CSS completamente separado de um documento HTML com a extensão .css, e para vinculá-lo é necessário aplicar um elemento dentro de
 
-        <p>
-            O CSS interno se encontra ainda dentro do &lt;head&gt; do documento HTML, mas a diferença é que todo
-            o código CSS é escrito entre as tags &lt;style&gt;&lt;/style&gt;, com tudo que fica dentro desta tag sendo
-            reconhecido como CSS e aplicado ao documento.
-        </p>
+        <head> no documento HTML, sendo este elemento:
+    </p>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code"> | &lt;!DOCTYPE html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | &lt;html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;meta charset="utf-8"&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;style&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |               p {</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |                   color: green;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |                   font-size: 40px;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|               }</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|        &lt;/style&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|    &lt;/head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|    &lt;body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|        &lt;p&gt;Este é um parágrafo&lt;/p&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">|    &lt;/body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| &lt;/html&gt;</span></right></pre>
-        </div>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;link rel="stylesheet" href="caminho do arquivo .css"&gt;</span></right></pre>
+    </div>
 
-        <h3>Resultado:</h3>
-        <p id="exemplo">Este é um parágrafo.</p>
+    <p>
+        Este elemento permite que o documento HTML encontre o documento CSS para que ambos sejam vínculados e os elementos HTML se mostrem estilizados pra o usuário.
+    </p>
 
-        <p>
-            Este método é útil para sites simples que possuem uma página só, ou para estilizar algo
-            específico da página onde este CSS está, mas não é recomendado para um site com múltiplas
-            páginas já que seria necessário copiar este CSS em todos os documentos HTML.
-        </p>
+    <p>
+        O CSS interno se encontra ainda dentro do &lt;head&gt; do documento HTML, mas a diferença é que todo o código CSS é escrito entre as tags &lt;style&gt;&lt;/style&gt;, com tudo que fica dentro desta tag sendo reconhecido como CSS e aplicado ao documento.
+    </p>
 
-        <p>
-            Já o CSS inline fica dentro de tags HTML, afetando apenas o elemento onde está, não tendo
-            efeito nenhum em outros elementos. Para utilizá-lo deve-se colocar a palavra style dentro
-            de uma tag, seguido de um sinal de igual e duas aspas, com as propriedades e valores
-            desejados dentro das aspas.            
-        </p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;!DOCTYPE html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;meta charset="utf-8"&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;style&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">              p {</span></right></pre>
+        <pre class="lineNum"><right><span class="code">                  color: green;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">                  font-size: 40px;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">             }</span></right></pre>
+        <pre class="lineNum"><right><span class="code">      &lt;/style&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">  &lt;/head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">  &lt;body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">      &lt;p&gt;Este é um parágrafo&lt;/p&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">  &lt;/body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;/html&gt;</span></right></pre>
+    </div>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code"> | &lt;!DOCTYPE html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | &lt;html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;meta charset="utf-8"&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;/head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;p style="color: green; font-size: 40px;"&gt;Este é um parágrafo&lt;/p&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;/body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| &lt;/html&gt;</span></right></pre>
-        </div>
+    <h3>Resultado:</h3>
+    <p id="exemplo">Este é um parágrafo.</p>
 
-        <p>
-            É altamente recomendado que este método não seja utilizado já que ele é o menos eficiente
-            dentre os três, e com menos utilidade a não ser que seja necessário estilizar algo
-            extremamente específico, e ainda assim é possível usar o CSS interno para isso ao invés deste.            
-        </p>
+    <p>
+        Este método é útil para sites simples que possuem uma página só, ou para estilizar algo específico da página onde este CSS está, mas não é recomendado para um site com múltiplas páginas já que seria necessário copiar este CSS em todos os documentos HTML.
+    </p>
 
-        <h2>Seletores e propriedades básicas do CSS</h2>
+    <p>
+        Já o CSS inline fica dentro de tags HTML, afetando apenas o elemento onde está, não tendo efeito nenhum em outros elementos. Para utilizá-lo deve-se colocar a palavra style dentro de uma tag, seguido de um sinal de igual e duas aspas, com as propriedades
+        e valores desejados dentro das aspas.
+    </p>
 
-        <ol>
-            <li>
-                h1 (até h6): permite a estilização de títulos de h1 até h6.
-            </li>
-            <br>
-            <li>
-                p: permite a estilização de parágrafos.
-            </li>
-        </ol>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;!DOCTYPE html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;meta charset="utf-8"&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;/head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;p style="color: green; font-size: 40px;"&gt;Este é um parágrafo&lt;/p&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;/body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;/html&gt;</span></right></pre>
+    </div>
 
-        <p>
-            Já abaixo, estão algumas propriedades básicas de CSS que sempre serão usadas para a criação de
-            páginas web:            
-        </p>
+    <p>
+        É altamente recomendado que este método não seja utilizado já que ele é o menos eficiente dentre os três, e com menos utilidade a não ser que seja necessário estilizar algo extremamente específico, e ainda assim é possível usar o CSS interno para isso
+        ao invés deste.
+    </p>
 
-        <ol>
-            <li>
-                font-size: permite a alteração do tamanho da fonte de um elemento (se aplicável).
-            </li>
-            <br>
-            <li>
-                width: permite a alteração da largura de um elemento (se aplicável).
-            </li>
-            <br>
-            <li>
-                background-color: permite a alteração da cor de fundo de um elemento.
-            </li>
-            <br>
-            <li>
-                color: permite a alteração da cor de um texto (se aplicável).
-            </li>
-        </ol>
+    <h2>Seletores e propriedades básicas do CSS</h2>
 
-        <hr>
+    <ol>
+        <li>
+            h1 (até h6): permite a estilização de títulos de h1 até h6.
+        </li>
+        <br>
+        <li>
+            p: permite a estilização de parágrafos.
+        </li>
+    </ol>
 
-        <h2>Referências</h2>
+    <p>
+        Já abaixo, estão algumas propriedades básicas de CSS que sempre serão usadas para a criação de páginas web:
+    </p>
 
-        <ul>
-            <li>CSS: <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">https://developer.mozilla.org/pt-BR/docs/Web/CSS</a></li>
-            <li>Cascading Style Sheets (CSS): <a href="https://www.infoescola.com/informatica/cascading-style-sheets-css/">https://www.infoescola.com/informatica/cascading-style-sheets-css/</a></li>
-            <li>Getting started with CSS: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started">https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started</a></li>
-            <li>How CSS is structured: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured</a></li>
-        </ul>
-    </body>
+    <ol>
+        <li>
+            font-size: permite a alteração do tamanho da fonte de um elemento (se aplicável).
+        </li>
+        <br>
+        <li>
+            width: permite a alteração da largura de um elemento (se aplicável).
+        </li>
+        <br>
+        <li>
+            background-color: permite a alteração da cor de fundo de um elemento.
+        </li>
+        <br>
+        <li>
+            color: permite a alteração da cor de um texto (se aplicável).
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>Referências</h2>
+
+    <ul>
+        <li>CSS: <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">https://developer.mozilla.org/pt-BR/docs/Web/CSS</a></li>
+        <li>Cascading Style Sheets (CSS): <a href="https://www.infoescola.com/informatica/cascading-style-sheets-css/">https://www.infoescola.com/informatica/cascading-style-sheets-css/</a></li>
+        <li>Getting started with CSS: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started">https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started</a></li>
+        <li>How CSS is structured: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured</a></li>
+    </ul>
+</body>
+
 </html>

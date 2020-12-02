@@ -17,7 +17,7 @@ html {
     left: 700px;
     height: 50px;
     width: 300px;
-    background-color: #1E1E2C;
+    background-color: #008080;
 }
 
 .playground {
@@ -26,7 +26,7 @@ html {
     bottom: 0;
     left: 700px;
     width: 300px;
-    background-color: #1E1E2C;
+    background-color: #008080;
 }
 
 .code-editor {
@@ -57,7 +57,7 @@ html {
     bottom: 0;
     left: 1000px;
     overflow: hidden;
-    background-color: darkgray;
+    background-color: #dddddd;
 }
 
 .cabecalho {
@@ -68,7 +68,7 @@ html {
     height: 50px;
     font-size: 40px;
     color: white;
-    background-color: rgb(29, 29, 29);
+    background-color: #008080;
 }
 
 .sidebar {
@@ -79,7 +79,7 @@ html {
     left: 0;
     width: 200px;
     overflow: hidden;
-    background-color: rgb(29, 29, 29);
+    background-color: #008080;
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -89,12 +89,12 @@ td {
     font-size: 40px;
     width: 190px;
     border-style: groove;
-    border-color: gray;
+    border-color: #dddddd;
     color: darkgray;
 }
 
 td:hover {
-    background-color: rgb(145, 145, 145);
+    background-color: #00adad;
 }
 
 .aula {
@@ -139,7 +139,7 @@ a {
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: #3c3c55;
+    background-color: #005757;
     font-family: inherit;
     margin: 0;
 }

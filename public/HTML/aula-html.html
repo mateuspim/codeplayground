@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de HTML</title>
     <style>
-        body{
-            background-color: darkgray;
+        body {
+            background-color: #dddddd;
             margin: 0;
             padding: 0px 20px 0px 20px;
         }
-
+        
         .container {
-              counter-reset: line;
-              font-size: 15px;
-              background-color: white;
+            counter-reset: line;
+            font-size: 15px;
+            background-color: white;
         }
+        
         .container .lineNum {
             display: block;
             line-height: 1.5rem;
@@ -24,227 +26,198 @@
             margin: 0;
             padding-left: 10px;
         }
-
+        
         .container .lineNum:before {
             counter-increment: line;
             content: counter(line);
             display: inline-block;
             margin-right: .5em;
         }
-
-        .container .code{
+        
+        .container .code {
             color: black;
         }
     </style>
 </head>
-    <body>
-        <h1>Aula 1: HTML</h1>
-        <hr>
-        <h2>Introdução</h2>
-        <p>
-            HTML significa HyperText Markup Language (Linguagem de Marcação de Hipertexto em português) e
-            ela é a linguagem que permite a estruturação e significado de conteúdos em uma página web. O
-            criador desta linguagem foi Tim Berners-Lee, a desenvolvendo em 1991 no CERN (European Council
-            for Nuclear Research) na Suíça.
-        </p>
-        <p>
-            Seu propósito inicial foi facilitar a troca de documentos entre instituições de pesquisa com
-            mais facilidade, sendo liberada a biblioteca de desenvolvimento WWW (World Wide Web) em 1992,
-            sendo uma rede com alcance global que ao trabalhar com o HTML, permitiu da WEB em escala global.
-        </p>
-        <h2>Funcionamento</h2>
-        <p>
-            A palavra "Hipertexto" no nome da linguagem se refere aos links (Ligações em português) que
-            permitem a conexão entre páginas da Web, dentro de um site ou entre sites diferentes. Páginas
-            que possuem algum vínculo com outras páginas da Web e estão na internet, são efetivamente parte
-            da WWW.
-        </p>
-        <p>
-            Já a palavra "Marcação" se refere ao que é chamado de "tags" na linguagem, e seu propósito é
-            permitir que conteúdos como texto, imagens, aúdio etc. sejam marcados na página para serem
-            exibidos. Alguns exemplos de tags seriam &lt;html&gt;, &lt;head&gt;, &lt;body&gt; etc.
-        </p>
-        <p>
-            Todos os documentos HTML são arquivos de extensão .html ou .htm que possuem tags que são 
-            arranjadas com uma certa hierarquia que será citada depois. As tags possuem uma estrutura que
-            contém o nome do elemento que será utilizado entre os caractéres "&lt;" e "&gt;", e o nome do
-            elemento pode ser escrito em minúsculo, maiúsculo, ou uma mistura de ambos.
-        </p>
-        <h2>Escrevendo Elementos HTML</h2>
-        <p>
-            Existem três passos que devem ser seguidos ao adicionar um elemento em um documento HTML, e
-            para exemplificar isso vamos colocar a seguinte situação:
-        </p>
-        <p>Eu quero que apareça um parágrafo em uma página que eu criar, como eu faço isso?</p>
 
-        <ol>
-            <li>
-                Criar a tag de abertura: consiste do nome do elemento entre "&lt;" e "&gt;", indicando o início
-                do elemento que você está criando.
-            </li>
-            <br>
-            <li>
-                Criar a tag de fechamento: o mesmo processo do item acima, porém possui uma barra "/" antes
-                do nome do elemento, indicando o fim do elemento criado. Se este passo não for feito, erros
-                podem ocorrer em toda a página.
-            </li>
-            <br>
+<body>
+    <h1>Aula 1: HTML</h1>
+    <hr>
+    <h2>Introdução</h2>
+    <p>
+        HTML significa HyperText Markup Language (Linguagem de Marcação de Hipertexto em português) e ela é a linguagem que permite a estruturação e significado de conteúdos em uma página web. O criador desta linguagem foi Tim Berners-Lee, a desenvolvendo em
+        1991 no CERN (European Council for Nuclear Research) na Suíça.
+    </p>
+    <p>
+        Seu propósito inicial foi facilitar a troca de documentos entre instituições de pesquisa com mais facilidade, sendo liberada a biblioteca de desenvolvimento WWW (World Wide Web) em 1992, sendo uma rede com alcance global que ao trabalhar com o HTML, permitiu
+        da WEB em escala global.
+    </p>
+    <h2>Funcionamento</h2>
+    <p>
+        A palavra "Hipertexto" no nome da linguagem se refere aos links (Ligações em português) que permitem a conexão entre páginas da Web, dentro de um site ou entre sites diferentes. Páginas que possuem algum vínculo com outras páginas da Web e estão na internet,
+        são efetivamente parte da WWW.
+    </p>
+    <p>
+        Já a palavra "Marcação" se refere ao que é chamado de "tags" na linguagem, e seu propósito é permitir que conteúdos como texto, imagens, aúdio etc. sejam marcados na página para serem exibidos. Alguns exemplos de tags seriam &lt;html&gt;, &lt;head&gt;,
+        &lt;body&gt; etc.
+    </p>
+    <p>
+        Todos os documentos HTML são arquivos de extensão .html ou .htm que possuem tags que são arranjadas com uma certa hierarquia que será citada depois. As tags possuem uma estrutura que contém o nome do elemento que será utilizado entre os caractéres "&lt;"
+        e "&gt;", e o nome do elemento pode ser escrito em minúsculo, maiúsculo, ou uma mistura de ambos.
+    </p>
+    <h2>Escrevendo Elementos HTML</h2>
+    <p>
+        Existem três passos que devem ser seguidos ao adicionar um elemento em um documento HTML, e para exemplificar isso vamos colocar a seguinte situação:
+    </p>
+    <p>Eu quero que apareça um parágrafo em uma página que eu criar, como eu faço isso?</p>
 
-            <li>
-                Colocar o conteúdo: neste caso é o próprio conteúdo que deseja colocar entre as tags.
-            </li>
-        </ol>
+    <ol>
+        <li>
+            Criar a tag de abertura: consiste do nome do elemento entre "&lt;" e "&gt;", indicando o início do elemento que você está criando.
+        </li>
+        <br>
+        <li>
+            Criar a tag de fechamento: o mesmo processo do item acima, porém possui uma barra "/" antes do nome do elemento, indicando o fim do elemento criado. Se este passo não for feito, erros podem ocorrer em toda a página.
+        </li>
+        <br>
 
-        <p>Estes três passos criar um elemento HTML, ou seja, para criar um parágrafo você deveria fazer o seguinte:</p>
+        <li>
+            Colocar o conteúdo: neste caso é o próprio conteúdo que deseja colocar entre as tags.
+        </li>
+    </ol>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code">| &lt;p&gt;Este é um parágrafo.&lt;/p&gt;</span></right></pre>
-        </div>
+    <p>Estes três passos criar um elemento HTML, ou seja, para criar um parágrafo você deveria fazer o seguinte:</p>
 
-        <h3>Resultado:</h3>
-        <p>Este é um parágrafo.</p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;p&gt;Este é um parágrafo.&lt;/p&gt;</span></right></pre>
+    </div>
 
-        <h2>Aninhamento de Elementos</h2>
+    <h3>Resultado:</h3>
+    <p>Este é um parágrafo.</p>
 
-        <p>
-            Também é possível escrever elementos dentro de outros elementos, isso recebe o nome de
-            aninhamento de elementos. Um exemplo seria querer deixar a palavra "parágrafo" do exemplo
-            anterior em negrito, e para isso usaríamos o elemento &lt;strong&gt; entre a palavra parágrafo:
-        </p>
+    <h2>Aninhamento de Elementos</h2>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code">| &lt;p&gt;Este é um &lt;strong&gt;parágrafo&lt;/strong&gt;.&lt;/p&gt;</span></right></pre>
-        </div>
+    <p>
+        Também é possível escrever elementos dentro de outros elementos, isso recebe o nome de aninhamento de elementos. Um exemplo seria querer deixar a palavra "parágrafo" do exemplo anterior em negrito, e para isso usaríamos o elemento &lt;strong&gt; entre
+        a palavra parágrafo:
+    </p>
 
-        <h3>Resultado:</h3>
-        <p>Este é um <strong>parágrafo</strong>.</p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;p&gt;Este é um &lt;strong&gt;parágrafo&lt;/strong&gt;.&lt;/p&gt;</span></right></pre>
+    </div>
 
-        <h2>Elementos em bloco e elementos <em>inline</em></h2>
+    <h3>Resultado:</h3>
+    <p>Este é um <strong>parágrafo</strong>.</p>
 
-        <p>
-            Existem dois tipos de elementos no HTML, sendo eles os elementos em bloco e os elementos
-            inline:
-        </p>
+    <h2>Elementos em bloco e elementos <em>inline</em></h2>
 
-        <ul>
-            <li>
-                Os elementos em bloco são os elementos que criar um bloco visível na página e fazem com que
-                qualquer elementos antes e depois dele fiquem acima e abaixo do mesmo, fazendo com que o
-                elemento em bloco apareça em uma nova linha, e o elemento seguinte aparece na linha seguinte.                
-            </li>
-            <br>
-            <li>
-                Os elementos inline são os elementos contidos dentro dos elementos em bloco, e que tem efeito
-                em apenas uma pequena parte do conteúdo do bloco onde se encontra, estes elementos podem
-                aparecer dentro de um parágrafo de texto, por exemplo, como o &lt;strong&gt; que foi citado acima.
-            </li>
-        </ul>
+    <p>
+        Existem dois tipos de elementos no HTML, sendo eles os elementos em bloco e os elementos inline:
+    </p>
 
-        <h2>Elementos vazios</h2>
+    <ul>
+        <li>
+            Os elementos em bloco são os elementos que criar um bloco visível na página e fazem com que qualquer elementos antes e depois dele fiquem acima e abaixo do mesmo, fazendo com que o elemento em bloco apareça em uma nova linha, e o elemento seguinte aparece
+            na linha seguinte.
+        </li>
+        <br>
+        <li>
+            Os elementos inline são os elementos contidos dentro dos elementos em bloco, e que tem efeito em apenas uma pequena parte do conteúdo do bloco onde se encontra, estes elementos podem aparecer dentro de um parágrafo de texto, por exemplo, como o &lt;strong&gt;
+            que foi citado acima.
+        </li>
+    </ul>
 
-        <p>
-            Existem alguns elementos que não seguem os três passos de escrita de um elemento, não exigindo
-            uma tag de abertura, conteúdo ou tag de fechamento, sendo estes os elementos vazios. O uso
-            deles está em incorporar algo em uma página, como imagens que podem ser incluidas com a tag
-            &lt;img&gt;:
-        </p>
+    <h2>Elementos vazios</h2>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code">| &lt;img src="www.endereco.com"&gt;</span></right></pre>
-        </div>
+    <p>
+        Existem alguns elementos que não seguem os três passos de escrita de um elemento, não exigindo uma tag de abertura, conteúdo ou tag de fechamento, sendo estes os elementos vazios. O uso deles está em incorporar algo em uma página, como imagens que podem
+        ser incluidas com a tag &lt;img&gt;:
+    </p>
 
-        <h2>Hierarquia/Anatomia do HTML</h2>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;img src="www.endereco.com"&gt;</span></right></pre>
+    </div>
 
-        <p>
-            Agora com o conhecimento básico do HTML, começaremos a falar da hierarquia de elementos da
-            linguagem, que consiste em uma estrutura básica que deve ser seguida na construção de uma
-            página HTML, a estrutura em questão é:
-        </p>
+    <h2>Hierarquia/Anatomia do HTML</h2>
 
-        <div class="container">
-            <pre class="lineNum"><right><span class="code"> | &lt;!DOCTYPE html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> | &lt;html&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;meta charset="utf-8"&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;/head&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |        &lt;p&gt;Este é um parágrafo&lt;/p&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code"> |    &lt;/body&gt;</span></right></pre>
-            <pre class="lineNum"><right><span class="code">| &lt;/html&gt;</span></right></pre>
-        </div>
+    <p>
+        Agora com o conhecimento básico do HTML, começaremos a falar da hierarquia de elementos da linguagem, que consiste em uma estrutura básica que deve ser seguida na construção de uma página HTML, a estrutura em questão é:
+    </p>
 
-        <p>Os elementos que constam no código são:</p>
+    <div class="container">
+        <pre class="lineNum"><right><span class="code">&lt;!DOCTYPE html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;html&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;meta charset="utf-8"&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;title&gt;Página de Teste&lt;/title&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;/head&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">       &lt;p&gt;Este é um parágrafo&lt;/p&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">   &lt;/body&gt;</span></right></pre>
+        <pre class="lineNum"><right><span class="code">&lt;/html&gt;</span></right></pre>
+    </div>
 
-        <ol>
-            <li>
-                &lt;!DOCTYPE html&gt;: o doctype se trata do indicativo das regras que a página irá seguir, além
-                de estar indicando também a versão que o documento segue, e neste caso este doctype indica a
-                versão 5 do HTML que é a mais recente.
-            </li>
-            <br>
-            <li>
-                &lt;html&gt;&lt;/html&gt;: Este é o elemento que basicamente indica que o documento é HTML, ele envolve
-                todo o conteúdo de uma página, sendo considerado o elemento raiz.
-            </li>
-            <br>
-            <li>
-                &lt;head&gt;&lt;/head&gt;: Tudo o que está dentro deste elemento são os conteúdos que não devem ser
-                visíveis para o usuário, como palavras-chave da página, conjunto de caracteres, estilização da
-                página etc.
-            </li>
-            <br>
-            <li>
-                &lt;meta charset="utf-8"&gt;: Este elemento se trata da definição da codificação de caracteres
-                usados na página, no caso do "utf-8", ele possui a maioria dos caracteres usados nas linguas
-                humanas escritas, podendo lidar com textos de qualquer idioma. Geralmente a falta deste
-                elemento causa erros ao utilizar caracteres com acento, ou outros caracteres como o "ç".
-            </li>
-            <br>
-            <li>
-                &lt;title&gt;&lt;/title&gt;: Indica o título da página que irá aparecer na aba do navegador que o
-                usuário está utilizando.
-            </li>
-            <br>
-            <li>
-                &lt;body&gt;&lt;/body&gt;: Neste local reside todo o conteúdo que será visível ao usuário que acessar
-                a página, podendo ser eles textos, vídeos, imagens, áudios etc.
-            </li>
-        </ol>
+    <p>Os elementos que constam no código são:</p>
 
-        <h2>Tags básicas de HTML</h2>
-        
-        <p>À seguir estão algumas tags simples HTML que sempre são utilizadas ao criar uma página web:</p>
+    <ol>
+        <li>
+            &lt;!DOCTYPE html&gt;: o doctype se trata do indicativo das regras que a página irá seguir, além de estar indicando também a versão que o documento segue, e neste caso este doctype indica a versão 5 do HTML que é a mais recente.
+        </li>
+        <br>
+        <li>
+            &lt;html&gt;&lt;/html&gt;: Este é o elemento que basicamente indica que o documento é HTML, ele envolve todo o conteúdo de uma página, sendo considerado o elemento raiz.
+        </li>
+        <br>
+        <li>
+            &lt;head&gt;&lt;/head&gt;: Tudo o que está dentro deste elemento são os conteúdos que não devem ser visíveis para o usuário, como palavras-chave da página, conjunto de caracteres, estilização da página etc.
+        </li>
+        <br>
+        <li>
+            &lt;meta charset="utf-8"&gt;: Este elemento se trata da definição da codificação de caracteres usados na página, no caso do "utf-8", ele possui a maioria dos caracteres usados nas linguas humanas escritas, podendo lidar com textos de qualquer idioma.
+            Geralmente a falta deste elemento causa erros ao utilizar caracteres com acento, ou outros caracteres como o "ç".
+        </li>
+        <br>
+        <li>
+            &lt;title&gt;&lt;/title&gt;: Indica o título da página que irá aparecer na aba do navegador que o usuário está utilizando.
+        </li>
+        <br>
+        <li>
+            &lt;body&gt;&lt;/body&gt;: Neste local reside todo o conteúdo que será visível ao usuário que acessar a página, podendo ser eles textos, vídeos, imagens, áudios etc.
+        </li>
+    </ol>
 
-        <ol>
-            <li>
-                &lt;h1&gt;&lt;/h1&gt;: Cria o título principal de uma página (Deve ser usado apenas uma vez). Existem
-                variantes que podem ser usadas para outros títulos e podem ser repitidas (e.g. &lt;h2&gt;, &lt;h3&gt; etc.).
-            </li>
-            <br>
-            <li>
-                &lt;p&gt;&lt;/p&gt;: Cria um parágrafo, como já foi mencionado anteriormente.
-            </li>
-            <br>
-            <li>
-                &lt;br&gt;: Elemento vazio que cria uma quebra de linha logo após o elemento que antecede este.
-            </li>
-            <br>
-            <li>
-                &lt;hr&gt;: Cria uma divisão de tópicos com uma linha horizontal que preenche uma página inteira na
-horizontal.
-            </li>
-        </ol>
+    <h2>Tags básicas de HTML</h2>
 
-        <hr>
+    <p>À seguir estão algumas tags simples HTML que sempre são utilizadas ao criar uma página web:</p>
 
-        <h2>Referências</h2>
+    <ol>
+        <li>
+            &lt;h1&gt;&lt;/h1&gt;: Cria o título principal de uma página (Deve ser usado apenas uma vez). Existem variantes que podem ser usadas para outros títulos e podem ser repitidas (e.g. &lt;h2&gt;, &lt;h3&gt; etc.).
+        </li>
+        <br>
+        <li>
+            &lt;p&gt;&lt;/p&gt;: Cria um parágrafo, como já foi mencionado anteriormente.
+        </li>
+        <br>
+        <li>
+            &lt;br&gt;: Elemento vazio que cria uma quebra de linha logo após o elemento que antecede este.
+        </li>
+        <br>
+        <li>
+            &lt;hr&gt;: Cria uma divisão de tópicos com uma linha horizontal que preenche uma página inteira na horizontal.
+        </li>
+    </ol>
 
-        <ul>
-            <li>HTML: Linguagem de Marcação de Hipertexto: <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">https://developer.mozilla.org/pt-BR/docs/Web/HTML</a></li>
-            <li>HTML: <a href="https://www.infoescola.com/informatica/html/">https://www.infoescola.com/informatica/html/</a></li>
-            <li>Iniciando com HTML: <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started">https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started</a></li>
-            <li>HTML Element Reference - By Category: <a href="https://www.w3schools.com/tags/ref_byfunc.asp">https://www.w3schools.com/tags/ref_byfunc.asp</a></li>
-        </ul>
-    </body>
+    <hr>
+
+    <h2>Referências</h2>
+
+    <ul>
+        <li>HTML: Linguagem de Marcação de Hipertexto: <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">https://developer.mozilla.org/pt-BR/docs/Web/HTML</a></li>
+        <li>HTML: <a href="https://www.infoescola.com/informatica/html/">https://www.infoescola.com/informatica/html/</a></li>
+        <li>Iniciando com HTML: <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started">https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started</a></li>
+        <li>HTML Element Reference - By Category: <a href="https://www.w3schools.com/tags/ref_byfunc.asp">https://www.w3schools.com/tags/ref_byfunc.asp</a></li>
+    </ul>
+</body>
+
 </html>
