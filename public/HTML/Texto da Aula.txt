@@ -1,0 +1,159 @@
+----------------------------------------------------------------------------------------------
+
+AULA 1 - HTML
+
+----------------------------------------------------------------------------------------------
+
+INTRODUÇÃO
+
+HTML significa HyperText Markup Language (Linguagem de Marcação de Hipertexto em português) e
+ela é a linguagem que permite a estruturação e significado de conteúdos em uma página web. O
+criador desta linguagem foi Tim Berners-Lee, a desenvolvendo em 1991 no CERN (European Council
+for Nuclear Research) na Suíça.
+
+Seu propósito inicial foi facilitar a troca de documentos entre instituições de pesquisa com
+mais facilidade, sendo liberada a biblioteca de desenvolvimento WWW (World Wide Web) em 1992,
+sendo uma rede com alcance global que ao trabalhar com o HTML, permitiu da WEB em escala global.
+
+FUNCIONAMENTO
+
+A palavra "Hipertexto" no nome da linguagem se refere aos links (Ligações em português) que
+permitem a conexão entre páginas da Web, dentro de um site ou entre sites diferentes. Páginas
+que possuem algum vínculo com outras páginas da Web e estão na internet, são efetivamente parte
+da WWW.
+
+Já a palavra "Marcação" se refere ao que é chamado de "tags" na linguagem, e seu propósito é
+permitir que conteúdos como texto, imagens, aúdio etc. sejam marcados na página para serem
+exibidos. Alguns exemplos de tags seriam <html>, <head>, <body> etc.
+
+Todos os documentos HTML são arquivos de extensão .html ou .htm que possuem tags que são 
+arranjadas com uma certa hierarquia que será citada depois. As tags possuem uma estrutura que
+contém o nome do elemento que será utilizado entre os caractéres "<" e ">", e o nome do
+elemento pode ser escrito em minúsculo, maiúsculo, ou uma mistura de ambos. 
+
+ESCREVENDO ELEMENTOS HTML
+
+Existem três passos que devem ser seguidos ao adicionar um elemento em um documento HTML, e
+para exemplificar isso vamos colocar a seguinte situação:
+
+Eu quero que apareça um parágrafo em uma página que eu criar, como eu faço isso?
+
+1 - Criar a tag de abertura: consiste do nome do elemento entre "<" e ">", indicando o início
+do elemento que você está criando.
+
+2 - Criar a tag de fechamento: o mesmo processo do item acima, porém possui uma barra "/" antes
+do nome do elemento, indicando o fim do elemento criado. Se este passo não for feito, erros
+podem ocorrer em toda a página.
+
+3 - Colocar o conteúdo: neste caso é o próprio conteúdo que deseja colocar entre as tags.
+
+Estes três passos criar um elemento HTML, ou seja, para criar um parágrafo você deveria fazer
+o seguinte:
+
+<p>Este é um parágrafo.</p>
+
+ANINHAMENTO DE ELEMENTOS
+
+Também é possível escrever elementos dentro de outros elementos, isso recebe o nome de
+aninhamento de elementos. Um exemplo seria querer deixar a palavra "parágrafo" do exemplo
+anterior em negrito, e para isso usaríamos o elemento <strong> entre a palavra parágrafo:
+
+<p>Este é um <strong>parágrafo</strong>.</p>
+
+ELEMENTOS EM BLOCO E ELEMENTOS INLINE
+
+Existem dois tipos de elementos no HTML, sendo eles os elementos em bloco e os elementos
+inline:
+
+* Os elementos em bloco são os elementos que criar um bloco visível na página e fazem com que
+qualquer elementos antes e depois dele fiquem acima e abaixo do mesmo, fazendo com que o
+elemento em bloco apareça em uma nova linha, e o elemento seguinte aparece na linha seguinte.
+
+* Os elementos inline são os elementos contidos dentro dos elementos em bloco, e que tem efeito
+em apenas uma pequena parte do conteúdo do bloco onde se encontra, estes elementos podem
+aparecer dentro de um parágrafo de texto, por exemplo, como o <strong> que foi citado acima.
+
+ELEMENTOS VAZIOS
+
+Existem alguns elementos que não seguem os três passos de escrita de um elemento, não exigindo
+uma tag de abertura, conteúdo ou tag de fechamento, sendo estes os elementos vazios. O uso
+deles está em incorporar algo em uma página, como imagens que podem ser incluidas com a tag
+<img>:
+
+<img src="www.endereco.com">
+
+HIERARQUIA/ANATOMIA DO HTML
+
+Agora com o conhecimento básico do HTML, começaremos a falar da hierarquia de elementos da
+linguagem, que consiste em uma estrutura básica que deve ser seguida na construção de uma
+página HTML, a estrutura em questão é:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Página de Teste</title>
+  </head>
+  <body>
+    <p>Este é um parágrafo.</p>
+  </body>
+</html>
+
+Os elementos que constam no código são:
+
+1 - <!DOCTYPE html>: o doctype se trata do indicativo das regras que a página irá seguir, além
+de estar indicando também a versão que o documento segue, e neste caso este doctype indica a
+versão 5 do HTML que é a mais recente.
+
+2 - <html></html>: Este é o elemento que basicamente indica que o documento é HTML, ele envolve
+todo o conteúdo de uma página, sendo considerado o elemento raiz.
+
+3 - <head></head>: Tudo o que está dentro deste elemento são os conteúdos que não devem ser
+visíveis para o usuário, como palavras-chave da página, conjunto de caracteres, estilização da
+página etc.
+
+4 - <meta charset="utf-8">: Este elemento se trata da definição da codificação de caracteres
+usados na página, no caso do "utf-8", ele possui a maioria dos caracteres usados nas linguas
+humanas escritas, podendo lidar com textos de qualquer idioma. Geralmente a falta deste
+elemento causa erros ao utilizar caracteres com acento, ou outros caracteres como o "ç".
+
+5 - <title></title>: Indica o título da página que irá aparecer na aba do navegador que o
+usuário está utilizando.
+
+6 - <body></body>: Neste local reside todo o conteúdo que será visível ao usuário que acessar
+a página, podendo ser eles textos, vídeos, imagens, áudios etc.
+
+TAGS BÁSICAS DE HTML
+
+À seguir estão algumas tags simples HTML que sempre são utilizadas ao criar uma página web:
+
+1 - <h1></h1>: Cria o título principal de uma página (Deve ser usado apenas uma vez). Existem
+variantes que podem ser usadas para outros títulos e podem ser repitidas (e.g. <h2>, <h3> etc.).
+
+<h1>Título Principal</h1>
+<h2>Título Secundário</h2>
+
+2 - <p></p>: Cria um parágrafo, como já foi mencionado anteriormente.
+
+<p>Eu sou um parágrafo</p>
+
+3 - <br>: Elemento vazio que cria uma quebra de linha logo após o elemento que antecede este.
+
+<p>Haverá duas quebras de linhas após este texto</p><br>
+
+4 - <hr>: Cria uma divisão de tópicos com uma linha horizontal que preenche uma página inteira na
+horizonta.
+
+<p>Este é o tópico 1</p>
+<hr>
+<p>Este é o tópico 2</p>
+
+----------------------------------------------------------------------------------------------
+
+REFERÊNCIAS:
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTML
+https://www.infoescola.com/informatica/html/
+https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started
+https://www.w3schools.com/tags/ref_byfunc.asp
+
