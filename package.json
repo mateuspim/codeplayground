@@ -1,28 +1,44 @@
 {
-    "name": "codeplayground",
-    "version": "1.0.1",
-    "description": "mvp",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "keywords": [],
-    "author": "OkamuraToshi",
-    "license": "ISC",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "cors": "^2.8.5",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "pusher": "^4.0.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/OkamuraToshi/codeplayground.git"
-    },
-    "bugs": {
-        "url": "https://github.com/OkamuraToshi/codeplayground/issues"
-    },
-    "homepage": "https://github.com/OkamuraToshi/codeplayground#readme"
+  "name": "client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.0",
+    "codemirror": "^5.58.3",
+    "pusher-js": "^7.0.1",
+    "pushid": "^1.0.0",
+    "react": "^17.0.1",
+    "react-codemirror2": "^7.2.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start-client": "react-scripts start",
+    "build": "react-scripts build && (cd server && npm install)",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "cd server && npm start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

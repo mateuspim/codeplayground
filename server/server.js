@@ -1,6 +1,16 @@
  // server.js
-
+ const express = require('express');
+ const bodyParser = require('body-parser');
+ const Pusher = require('pusher');
+ const axios = require('axios');
  //beginning of the file
+ const PORT = process.env.PORT || 5000;
+ const app = express();
+ const path = require('path');
+
+ const buildPath = path.join(__dirname, '..', 'build');
+ app.use(express.static(buildPath));
+
  app.use(bodyParser.json());
 
  app.post('/update-editor', (req, res) => {
@@ -13,12 +23,6 @@
 
  require('dotenv').config({ path: '.env' });
 
- const express = require('express');
- const bodyParser = require('body-parser');
- const cors = require('cors');
- const Pusher = require('pusher');
-
- const app = express();
 
  const pusher = new Pusher({
      appId: process.env.PUSHER_APP_ID,
@@ -28,11 +32,9 @@
      useTLS: true,
  });
 
- app.use(cors())
  app.use(bodyParser.urlencoded({ extended: false }));
  app.use(bodyParser.json());
 
- app.set('port', process.env.PORT || 5000);
- const server = app.listen(app.get('port'), () => {
-     console.log(`Express running → PORT ${server.address().port}`);
+ app.listen(PORT, () => {
+     console.log(`server started on port ${PORT}`);
  });
