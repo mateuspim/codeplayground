@@ -102,7 +102,7 @@ class App extends Component {
     return (
       <div className="App">
         <section className="cabecalho">
-        <a href="principal.html" target="frameaula"><img src="tryAlgo.png" alt="TryAlgo!" style={{height:48 }}/> - MVP</a>
+        <a href="principal.html" target="frameaula"><img src="tryAlgo.png" alt="TryAlgo!" style={{height:48 }}/></a>
         </section>
         <section className="sidebar">
             <div className="sidebar"><table className="tablesb"><tr><td><a href="aulas.html" target="frameaula">Aulas</a></td></tr><tr><td>Forum</td></tr><tr><td>Salas</td></tr></table></div>
